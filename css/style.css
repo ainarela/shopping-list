@@ -39,9 +39,13 @@ body {
 	width: 100%;
 }
 
-.new-item__submit {
+.new-item__submit,
+.delete-item-button {
+	background-color: transparent;
 	border: none;
+	font-family: "foundation-icons";
 	height: 1.5em;
+	outline: none;
 	position: absolute;
 	right: 0;
 	width: 1.5em;
@@ -69,7 +73,7 @@ body {
 .list__item-name {
 	font-size: 1.25em;
 	padding: 0 2.5em;
-	position: absolute;
+	position: relative;
 	width: 100%;
 }
 
@@ -77,6 +81,7 @@ body {
 .delete-item-button {
 	height: 1.5em;
 	position: absolute;
+	top: 0;
 	width: 1.5em;
 }
 
@@ -84,6 +89,3 @@ body {
 	left: 0;
 }
 
-.delete-item-button {
-	right: 0;
-}
