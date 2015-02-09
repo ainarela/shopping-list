@@ -1,3 +1,89 @@
+* {
+	box-sizing: border-box;
+}
+
 body {
 	font-family: "freight-sans-pro", sans-serif;
+	font-weight: 300;
+}
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 37.5em;
+	width: 90%;
+}
+
+.app-name {
+	text-align: center;
+	font-size: 2.5em;
+	font-weight: 300;
+	margin: 4.5em 0 2.25em;
+}
+
+.new-item {
+	border-bottom: 1px solid #888;
+	height: 2.5em;
+	margin-bottom: 1.25em;
+	padding: 0.5em 0.3125em;
+	position: relative;
+	width: 100%;
+}
+
+.new-item__text {
+	border: none;
+	font-family: "freight-sans-pro", sans-serif;
+	font-size: 1.25em;
+	outline: none;
+	padding-right: 2.5em;
+	position: absolute;
+	width: 100%;
+}
+
+.new-item__submit {
+	border: none;
+	height: 1.5em;
+	position: absolute;
+	right: 0;
+	width: 1.5em;
+}
+
+.hide-show {
+	margin-bottom: 3.125em;
+	text-align: center;
+	width: 100%;
+}
+
+.list {
+	list-style-type: none;
+	margin-bottom: 6.5em;
+	padding: 0;
+}
+
+.list__item {
+	height: 1.5em;
+	margin: 1.25em 0;
+	position: relative;
+	width: 100%;
+}
+
+.list__item-name {
+	font-size: 1.25em;
+	padding: 0 2.5em;
+	position: absolute;
+	width: 100%;
+}
+
+.list__item-checkbox,
+.delete-item-button {
+	height: 1.5em;
+	position: absolute;
+	width: 1.5em;
+}
+
+.list__item-checkbox {
+	left: 0;
+}
+
+.delete-item-button {
+	right: 0;
 }
