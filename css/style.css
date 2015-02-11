@@ -8,6 +8,12 @@ body {
 	font-weight: 300;
 }
 
+body, 
+input[type='text'] {
+	background-color: #fff;
+
+}
+
 .wrapper {
 	margin: 0 auto;
 	max-width: 37.5em;
