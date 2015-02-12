@@ -11,7 +11,7 @@ $(document).ready(function(){
 	// Hide/Show completed items
 	$('.hide-show__button').click(function(event){
 		event.preventDefault();
-		$('.list__item').has('.list__item-checkbox:checked').hide();
+		$('.list__item').has('.list__item-checkbox:checked').toggle();
 	});
 
 	 
