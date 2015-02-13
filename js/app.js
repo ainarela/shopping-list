@@ -11,22 +11,24 @@ $(document).ready(function(){
 	// Hide/Show completed items
 	$('.hide-show__button').click(function(event){
 		event.preventDefault();
-		var h = $(this).hasClass('completed-items-are-shown');
-		var s = $(this).hasClass('completed-items-are-hidden');
-		if (h == true) {
+		var shown = $(this).hasClass('completed-items-are-shown');
+		var hidden = $(this).hasClass('completed-items-are-hidden');
+		if (shown == true) {
 			$(this).removeClass('completed-items-are-shown').addClass('completed-items-are-hidden').html('Show completed items');
 			$('.list__item').has('.list__item-checkbox:checked').addClass('hide');
-		} else if (s == true) {
+		} else if (hidden == true) {
 			$(this).removeClass('completed-items-are-hidden').addClass('completed-items-are-shown').html('Hide completed items');
 			$('.list__item').has('.list__item-checkbox:checked').removeClass('hide');
 		}
 	});
 	$('.list__item-checkbox').click(function(){
-		var s = $('.hide-show__button').hasClass('completed-items-are-hidden');
-		if ( s == true){
+		var hidden = $('.hide-show__button').hasClass('completed-items-are-hidden');
+		if ( hidden == true){
 			// $('.list__item').has('.list__item-checkbox:checked').not('hide').addClass('hide');
 			$('.list__item').has('.list__item-checkbox:checked').addClass('hide');
-		};
+		} if (this.checked){
+			$('.list__item').has(this).appendTo('.list');
+		}
 	});	
 	// Delete a particular item
 	$('.list').on('click', '.delete-item-button', function(){
