@@ -28,5 +28,9 @@ $(document).ready(function(){
 			$('.list__item').has('.list__item-checkbox:checked').addClass('hide');
 		};
 	});	
+	// Delete a particular item
+	$('.list').on('click', '.delete-item-button', function(){
+		$('.list__item').has(this).remove();
+	});
 	 
 });
