@@ -1,3 +1,21 @@
+/* INDEX
+---------------------------------------------------------
+- Base
+- Layout
+- App name
+- Adding a new item form
+- Hide-show button
+- Items list
+- Submit a new item button, checkboxes and delete item button 
+	- Submit a new item button
+	- Checkboxes
+	- Delete item button
+*/
+
+
+/* Base 
+----------------------------------------------------------- */
+
 * {
 	box-sizing: border-box;
 }
@@ -14,11 +32,17 @@ input[type='text'] {
 
 }
 
+/* Layout 
+----------------------------------------------------------- */
+
 .wrapper {
 	margin: 0 auto;
 	max-width: 37.5em;
 	width: 90%;
 }
+
+/* App name 
+----------------------------------------------------------- */
 
 .app-name {
 	text-align: center;
@@ -26,6 +50,9 @@ input[type='text'] {
 	font-weight: 300;
 	margin: 4.5em 0 2.25em;
 }
+
+/* Adding a new item form 
+----------------------------------------------------------- */
 
 .new-item {
 	border-bottom: 1px solid #bdc3c7;
@@ -46,11 +73,30 @@ input[type='text'] {
 	width: 100%;
 }
 
+/* Hide-show button 
+----------------------------------------------------------- */
+
 .hide-show {
 	margin-bottom: 3.125em;
 	text-align: center;
 	width: 100%;
 }
+
+.hide-show__button {
+	background: transparent;
+	border: none;
+	color: #95a5a6;
+	font-family: "freight-sans-pro", sans-serif;
+	outline: none;
+	text-decoration: none;
+}
+
+.hide-show__button:hover {
+	text-decoration: underline;
+}
+
+/* Items list 
+----------------------------------------------------------- */
 
 .list {
 	list-style-type: none;
@@ -73,16 +119,15 @@ input[type='text'] {
 	width: 100%;
 }
 
-/* Icons and Buttons */
+.list__item.hide {
+	display: none;
+} 
 
-.hide-show__button {
-	color: #95a5a6;
-	text-decoration: none;
-}
 
-.hide-show__button:hover {
-	text-decoration: underline;
-}
+
+/* Submit a new item button, checkboxes and delete item button 
+----------------------------------------------------------------------------- */
+
 
 .new-item__submit,
 .list__item-checkbox,
@@ -109,11 +154,15 @@ input[type='text'] {
 	left: 0;
 }
 
+/* - Submit a new item button */
+
 .new-item__submit {
 	background-color: #27ae60;
 	border: none;
 	color: #fff;
 }
+
+/* - Checkboxes */
 
 .list__item-checkbox {
 	z-index: 9999;
@@ -140,11 +189,14 @@ input[type='text'] {
 	padding: 0.3775em 0;
 }
 
+/* - Delete item button */
+
 .delete-item-button {
     color: #e74c3c;
     border: none;
     background: transparent;
 }
+
 
 
 
