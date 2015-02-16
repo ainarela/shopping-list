@@ -23,11 +23,17 @@ $(document).ready(function(){
 	});
 	$('.list').on('click', '.list__item-checkbox', function(){
 		var hidden = $('.hide-show__button').hasClass('completed-items-are-hidden');
-		if ( hidden == true){
+		var checked = $(this).is(':checked');
+		if  (hidden == true && checked == true){
 			// $('.list__item').has('.list__item-checkbox:checked').not('hide').addClass('hide');
-			$('.list__item').has('.list__item-checkbox:checked').addClass('hide');
-		} if (this.checked){
+			$('.list__item').has(this).addClass('hide');
+		} 
+		if (checked == true){
+			// If the item is checked, it is placed at the end of the list 
 			$('.list__item').has(this).appendTo('.list');
+		} else {
+			// If the item is unchecked, it is placed at the beginning of the list 
+			$('.list__item').has(this).prependTo('.list');
 		}
 	});	
 	// Delete a particular item
