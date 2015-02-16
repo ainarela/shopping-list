@@ -21,7 +21,7 @@ $(document).ready(function(){
 			$('.list__item').has('.list__item-checkbox:checked').removeClass('hide');
 		}
 	});
-	$('.list__item-checkbox').click(function(){
+	$('.list').on('click', '.list__item-checkbox', function(){
 		var hidden = $('.hide-show__button').hasClass('completed-items-are-hidden');
 		if ( hidden == true){
 			// $('.list__item').has('.list__item-checkbox:checked').not('hide').addClass('hide');
